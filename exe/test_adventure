@@ -1,3 +1,12 @@
 #!/usr/bin/env ruby
 
 require "test_adventure"
+
+input_dir = '.'
+output_dir = 'output'
+input_dir = ARGV[0] unless ARGV.length < 1
+output_dir = ARGV[1] unless ARGV.length < 2
+
+include TestAdventure
+load_dependencies
+load_files input_dir

@@ -13,6 +13,7 @@ module TestAdventure
   end
 
   def load_files(dir)
+    puts "Searching tests in #{dir}"
     rbfiles = File.join(dir,"**", "*.rb")
     file_count = 0
     Dir.glob(rbfiles).each do |file|
@@ -29,7 +30,3 @@ module TestAdventure
     test = Test.new(name, "T#{count}")
   end
 end
-
-include TestAdventure
-load_dependencies
-load_files '../test_input'
