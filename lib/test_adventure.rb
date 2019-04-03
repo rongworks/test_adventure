@@ -20,7 +20,7 @@ module TestAdventure
       file_count+=1
       test = generate_test(file, file_count)
       test.instance_eval(File.read(file))
-      #puts test.inspect
+      puts Renderer.get_renderer('textile').render(test)
     end
     puts "#{file_count} files found"
   end
