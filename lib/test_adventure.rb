@@ -5,7 +5,7 @@ module TestAdventure
   # Your code goes here...
 
   def load_dependencies
-    rbfiles = File.join('../lib',"**", "*.rb")
+    rbfiles = File.join(__dir__,"**", "*.rb")
     Dir.glob(rbfiles).each do |file|
       require_relative file
       puts "loaded #{file}"

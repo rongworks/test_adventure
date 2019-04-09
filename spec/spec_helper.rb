@@ -1,4 +1,4 @@
-require "bundler/setup"
+#require "bundler/setup"
 require "test_adventure"
 
 RSpec.configure do |config|
@@ -12,5 +12,6 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+#Dir[File.join('..', 'lib', '**', '*.rb')].each { |file| require_relative file }
 include TestAdventure
 load_dependencies
